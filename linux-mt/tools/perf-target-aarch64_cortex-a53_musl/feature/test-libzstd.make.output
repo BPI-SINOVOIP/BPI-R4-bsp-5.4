@@ -1,0 +1,4 @@
+test-libzstd.c:2:10: fatal error: zstd.h: No such file or directory
+ #include <zstd.h>
+          ^~~~~~~~
+compilation terminated.

@@ -1,0 +1,741 @@
+Terminals unused in grammar
+
+    NOT
+
+
+Grammar
+
+    0 $accept: all_expr $end
+
+    1 all_expr: if_expr
+
+    2 if_expr: expr IF expr ELSE expr
+    3        | expr
+
+    4 expr: NUMBER
+    5     | ID
+    6     | expr '|' expr
+    7     | expr '&' expr
+    8     | expr '^' expr
+    9     | expr '+' expr
+   10     | expr '-' expr
+   11     | expr '*' expr
+   12     | expr '/' expr
+   13     | expr '%' expr
+   14     | '-' expr
+   15     | '(' if_expr ')'
+   16     | MIN '(' expr ',' expr ')'
+   17     | MAX '(' expr ',' expr ')'
+   18     | SMT_ON
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    '%' (37) 13
+    '&' (38) 7
+    '(' (40) 15 16 17
+    ')' (41) 15 16 17
+    '*' (42) 11
+    '+' (43) 9
+    ',' (44) 16 17
+    '-' (45) 10 14
+    '/' (47) 12
+    '^' (94) 8
+    '|' (124) 6
+    error (256)
+    NUMBER <num> (258) 4
+    ID <id> (259) 5
+    MIN (260) 16
+    MAX (261) 17
+    IF (262) 2
+    ELSE (263) 2
+    SMT_ON (264) 18
+    NEG (265)
+    NOT (266)
+
+
+Nonterminals, with rules where they appear
+
+    $accept (23)
+        on left: 0
+    all_expr (24)
+        on left: 1
+        on right: 0
+    if_expr <num> (25)
+        on left: 2 3
+        on right: 1 15
+    expr <num> (26)
+        on left: 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+        on right: 2 3 6 7 8 9 10 11 12 13 14 16 17
+
+
+State 0
+
+    0 $accept: . all_expr $end
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    all_expr  go to state 8
+    if_expr   go to state 9
+    expr      go to state 10
+
+
+State 1
+
+    4 expr: NUMBER .
+
+    $default  reduce using rule 4 (expr)
+
+
+State 2
+
+    5 expr: ID .
+
+    $default  reduce using rule 5 (expr)
+
+
+State 3
+
+   16 expr: MIN . '(' expr ',' expr ')'
+
+    '('  shift, and go to state 11
+
+
+State 4
+
+   17 expr: MAX . '(' expr ',' expr ')'
+
+    '('  shift, and go to state 12
+
+
+State 5
+
+   18 expr: SMT_ON .
+
+    $default  reduce using rule 18 (expr)
+
+
+State 6
+
+   14 expr: '-' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 13
+
+
+State 7
+
+   15 expr: '(' . if_expr ')'
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    if_expr  go to state 14
+    expr     go to state 10
+
+
+State 8
+
+    0 $accept: all_expr . $end
+
+    $end  shift, and go to state 15
+
+
+State 9
+
+    1 all_expr: if_expr .
+
+    $default  reduce using rule 1 (all_expr)
+
+
+State 10
+
+    2 if_expr: expr . IF expr ELSE expr
+    3        | expr .
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    IF   shift, and go to state 16
+    '|'  shift, and go to state 17
+    '^'  shift, and go to state 18
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+
+    $default  reduce using rule 3 (if_expr)
+
+
+State 11
+
+   16 expr: MIN '(' . expr ',' expr ')'
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 25
+
+
+State 12
+
+   17 expr: MAX '(' . expr ',' expr ')'
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 26
+
+
+State 13
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+   14     | '-' expr .
+
+    $default  reduce using rule 14 (expr)
+
+
+State 14
+
+   15 expr: '(' if_expr . ')'
+
+    ')'  shift, and go to state 27
+
+
+State 15
+
+    0 $accept: all_expr $end .
+
+    $default  accept
+
+
+State 16
+
+    2 if_expr: expr IF . expr ELSE expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 28
+
+
+State 17
+
+    6 expr: expr '|' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 29
+
+
+State 18
+
+    8 expr: expr '^' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 30
+
+
+State 19
+
+    7 expr: expr '&' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 31
+
+
+State 20
+
+   10 expr: expr '-' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 32
+
+
+State 21
+
+    9 expr: expr '+' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 33
+
+
+State 22
+
+   11 expr: expr '*' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 34
+
+
+State 23
+
+   12 expr: expr '/' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 35
+
+
+State 24
+
+   13 expr: expr '%' . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 36
+
+
+State 25
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+   16     | MIN '(' expr . ',' expr ')'
+
+    '|'  shift, and go to state 17
+    '^'  shift, and go to state 18
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+    ','  shift, and go to state 37
+
+
+State 26
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+   17     | MAX '(' expr . ',' expr ')'
+
+    '|'  shift, and go to state 17
+    '^'  shift, and go to state 18
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+    ','  shift, and go to state 38
+
+
+State 27
+
+   15 expr: '(' if_expr ')' .
+
+    $default  reduce using rule 15 (expr)
+
+
+State 28
+
+    2 if_expr: expr IF expr . ELSE expr
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    ELSE  shift, and go to state 39
+    '|'   shift, and go to state 17
+    '^'   shift, and go to state 18
+    '&'   shift, and go to state 19
+    '-'   shift, and go to state 20
+    '+'   shift, and go to state 21
+    '*'   shift, and go to state 22
+    '/'   shift, and go to state 23
+    '%'   shift, and go to state 24
+
+
+State 29
+
+    6 expr: expr . '|' expr
+    6     | expr '|' expr .
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    '^'  shift, and go to state 18
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+
+    $default  reduce using rule 6 (expr)
+
+
+State 30
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    8     | expr '^' expr .
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+
+    $default  reduce using rule 8 (expr)
+
+
+State 31
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    7     | expr '&' expr .
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+
+    $default  reduce using rule 7 (expr)
+
+
+State 32
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   10     | expr '-' expr .
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+
+    $default  reduce using rule 10 (expr)
+
+
+State 33
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+    9     | expr '+' expr .
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+
+    $default  reduce using rule 9 (expr)
+
+
+State 34
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   11     | expr '*' expr .
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    $default  reduce using rule 11 (expr)
+
+
+State 35
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   12     | expr '/' expr .
+   13     | expr . '%' expr
+
+    $default  reduce using rule 12 (expr)
+
+
+State 36
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+   13     | expr '%' expr .
+
+    $default  reduce using rule 13 (expr)
+
+
+State 37
+
+   16 expr: MIN '(' expr ',' . expr ')'
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 40
+
+
+State 38
+
+   17 expr: MAX '(' expr ',' . expr ')'
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 41
+
+
+State 39
+
+    2 if_expr: expr IF expr ELSE . expr
+
+    NUMBER  shift, and go to state 1
+    ID      shift, and go to state 2
+    MIN     shift, and go to state 3
+    MAX     shift, and go to state 4
+    SMT_ON  shift, and go to state 5
+    '-'     shift, and go to state 6
+    '('     shift, and go to state 7
+
+    expr  go to state 42
+
+
+State 40
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+   16     | MIN '(' expr ',' expr . ')'
+
+    '|'  shift, and go to state 17
+    '^'  shift, and go to state 18
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+    ')'  shift, and go to state 43
+
+
+State 41
+
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+   17     | MAX '(' expr ',' expr . ')'
+
+    '|'  shift, and go to state 17
+    '^'  shift, and go to state 18
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+    ')'  shift, and go to state 44
+
+
+State 42
+
+    2 if_expr: expr IF expr ELSE expr .
+    6 expr: expr . '|' expr
+    7     | expr . '&' expr
+    8     | expr . '^' expr
+    9     | expr . '+' expr
+   10     | expr . '-' expr
+   11     | expr . '*' expr
+   12     | expr . '/' expr
+   13     | expr . '%' expr
+
+    '|'  shift, and go to state 17
+    '^'  shift, and go to state 18
+    '&'  shift, and go to state 19
+    '-'  shift, and go to state 20
+    '+'  shift, and go to state 21
+    '*'  shift, and go to state 22
+    '/'  shift, and go to state 23
+    '%'  shift, and go to state 24
+
+    $default  reduce using rule 2 (if_expr)
+
+
+State 43
+
+   16 expr: MIN '(' expr ',' expr ')' .
+
+    $default  reduce using rule 16 (expr)
+
+
+State 44
+
+   17 expr: MAX '(' expr ',' expr ')' .
+
+    $default  reduce using rule 17 (expr)

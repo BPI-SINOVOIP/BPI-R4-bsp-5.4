@@ -1,0 +1,6 @@
+test-reallocarray.c: In function 'main':
+test-reallocarray.c:7:11: error: implicit declaration of function 'reallocarray'; did you mean 'realloc'? [-Werror=implicit-function-declaration]
+  return !!reallocarray(NULL, 1, 1);
+           ^~~~~~~~~~~~
+           realloc
+cc1: all warnings being treated as errors

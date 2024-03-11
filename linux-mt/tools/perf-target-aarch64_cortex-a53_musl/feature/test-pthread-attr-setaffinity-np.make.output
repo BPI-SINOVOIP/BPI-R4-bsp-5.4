@@ -1,0 +1,6 @@
+test-pthread-attr-setaffinity-np.c: In function 'main':
+test-pthread-attr-setaffinity-np.c:15:8: error: implicit declaration of function 'pthread_attr_setaffinity_np'; did you mean 'pthread_setaffinity_np'? [-Werror=implicit-function-declaration]
+  ret = pthread_attr_setaffinity_np(&thread_attr, sizeof(cs), &cs);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+        pthread_setaffinity_np
+cc1: all warnings being treated as errors

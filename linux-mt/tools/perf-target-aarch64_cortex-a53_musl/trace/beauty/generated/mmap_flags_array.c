@@ -1,0 +1,17 @@
+static const char *mmap_flags[] = {
+	[ilog2(0x01) + 1] = "SHARED",
+	[ilog2(0x02) + 1] = "PRIVATE",
+	[ilog2(0x10) + 1] = "FIXED",
+	[ilog2(0x20) + 1] = "ANONYMOUS",
+	[ilog2(0x008000) + 1] = "POPULATE",
+	[ilog2(0x010000) + 1] = "NONBLOCK",
+	[ilog2(0x020000) + 1] = "STACK",
+	[ilog2(0x040000) + 1] = "HUGETLB",
+	[ilog2(0x080000) + 1] = "SYNC",
+	[ilog2(0x100000) + 1] = "FIXED_NOREPLACE",
+	[ilog2(0x0100) + 1] = "GROWSDOWN",
+	[ilog2(0x0800) + 1] = "DENYWRITE",
+	[ilog2(0x1000) + 1] = "EXECUTABLE",
+	[ilog2(0x2000) + 1] = "LOCKED",
+	[ilog2(0x4000) + 1] = "NORESERVE",
+};

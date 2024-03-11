@@ -1,0 +1,10 @@
+<command-line>: error: "_FORTIFY_SOURCE" redefined [-Werror]
+<command-line>: note: this is the location of the previous definition
+In file included from /usr/include/python2.7/Python.h:8,
+                 from test-libpython.c:2,
+                 from test-all.c:14:
+/usr/include/python2.7/pyconfig.h:12:12: fatal error: aarch64-linux-gnu/python2.7/pyconfig.h: No such file or directory
+ #  include <aarch64-linux-gnu/python2.7/pyconfig.h>
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+compilation terminated.

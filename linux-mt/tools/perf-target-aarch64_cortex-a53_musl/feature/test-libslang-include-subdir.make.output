@@ -1,0 +1,4 @@
+test-libslang-include-subdir.c:2:10: fatal error: slang/slang.h: No such file or directory
+ #include <slang/slang.h>
+          ^~~~~~~~~~~~~~~
+compilation terminated.

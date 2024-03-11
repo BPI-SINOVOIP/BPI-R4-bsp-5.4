@@ -1,0 +1,4 @@
+test-backtrace.c:2:10: fatal error: execinfo.h: No such file or directory
+ #include <execinfo.h>
+          ^~~~~~~~~~~~
+compilation terminated.

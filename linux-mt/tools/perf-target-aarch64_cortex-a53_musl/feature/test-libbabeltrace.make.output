@@ -1,0 +1,4 @@
+test-libbabeltrace.c:3:10: fatal error: babeltrace/ctf-writer/writer.h: No such file or directory
+ #include <babeltrace/ctf-writer/writer.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.

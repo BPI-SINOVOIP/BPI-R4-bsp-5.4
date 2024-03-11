@@ -1,0 +1,6 @@
+test-gettid.c: In function 'main':
+test-gettid.c:8:9: error: implicit declaration of function 'gettid'; did you mean 'getgid'? [-Werror=implicit-function-declaration]
+  return gettid();
+         ^~~~~~
+         getgid
+cc1: all warnings being treated as errors

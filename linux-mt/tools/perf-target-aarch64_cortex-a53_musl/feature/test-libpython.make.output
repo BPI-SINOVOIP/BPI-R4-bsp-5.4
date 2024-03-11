@@ -1,0 +1,6 @@
+In file included from /usr/include/python2.7/Python.h:8,
+                 from test-libpython.c:2:
+/usr/include/python2.7/pyconfig.h:12:12: fatal error: aarch64-linux-gnu/python2.7/pyconfig.h: No such file or directory
+ #  include <aarch64-linux-gnu/python2.7/pyconfig.h>
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.

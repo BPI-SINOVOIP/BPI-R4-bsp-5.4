@@ -1,0 +1,4 @@
+test-glibc.c:5:10: fatal error: gnu/libc-version.h: No such file or directory
+ #include <gnu/libc-version.h>
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.

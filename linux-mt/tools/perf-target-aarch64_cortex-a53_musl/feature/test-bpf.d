@@ -1,0 +1,28 @@
+/storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/perf-target-aarch64_cortex-a53_musl/feature/test-bpf.bin: \
+ test-bpf.c \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/stdc-predef.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/arch/arm64/include/uapi/asm/unistd.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/include/uapi/asm-generic/unistd.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/arch/arm64/include/uapi/asm/bitsperlong.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/include/asm-generic/bitsperlong.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/include/uapi/asm-generic/bitsperlong.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/include/uapi/linux/bpf.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/include/linux/types.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/stdbool.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/stddef.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/bits/alltypes.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/stdint.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/bits/stdint.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/asm/types.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/asm-generic/types.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/asm-generic/int-ll64.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/asm/posix_types.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/asm-generic/posix_types.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/build_dir/target-aarch64_cortex-a53_musl/linux-mediatek_mt7988/linux-5.4.260/tools/include/uapi/linux/bpf_common.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/fortify/unistd.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/unistd.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/features.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/sys/glibc-types.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/sys/cdefs.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/bits/posix.h \
+ /storage/worksapce/Banana-Devel/Banana-Pi-R4/openwrt-github-devel/BPI-R4-OPENWRT-V21.02-Master-Devel_built/staging_dir/toolchain-aarch64_cortex-a53_gcc-8.4.0_musl/include/fortify/fortify-headers.h
